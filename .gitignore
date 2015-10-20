@@ -1,28 +1,25 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+struct matriz
+{ 
+   char m[50][50];
+   };
+int llenar_con_cadena (matriz vec[50], char cad[100], int n)
+{
+   int i,j,k;
+   int c;
+   c=0;
+   for (i=0;i<n;i++)
+   {  
+       for (j=0;j<n;j++)
+       {
+          for (k=0;k<n;k++)
+          {
+            vec[j].m[i][k] = cad[c];
+            c++;
+            if (cad[c] == ´\0´)
+            {
+              c = 0;
+              }
+            }
+          }
+        }
+      }  
